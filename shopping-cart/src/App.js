@@ -9,19 +9,20 @@ import Bought from './components/Bought';
 
 function App() {
   return (
-    <div>
-      <NavBar/>
+    <Router>
       <div>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/coins" element={<Coins />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/bought" element={<Bought />} />
-          </Routes>
-        </Router>
+        <NavBar/>
+        <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/coins" element={<Coins />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/bought" element={<Bought />} />
+            </Routes>
+
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

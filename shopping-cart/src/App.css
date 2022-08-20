@@ -1,0 +1,73 @@
+
+
+@font-face {
+  font-family: 'Digital';
+  src: url(./Silkscreen-Bold.ttf);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: black;
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+#logo-link {
+  max-width: 200px;
+}
+
+.logo {
+  font-family: 'Digital';
+  font-size: 30px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  scale: 1.1;
+}
+
+#cart-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#cart-amount {
+  background-color: aliceblue;
+  color: black;
+  position: absolute;
+  left: -20px;
+  top: -13px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
