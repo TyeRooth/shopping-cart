@@ -10,16 +10,14 @@ import Bought from './components/Bought';
 function App() {
   return (
     <Router>
-      <div>
+      <div className='page'>
         <NavBar/>
-        <div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/coins" element={<Coins />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/bought" element={<Bought />} />
-            </Routes>
-        </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/coins" element={<Coins />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/bought" element={<Bought />} />
+          </Routes>
       </div>
       <Cart />
       <div className='cart-backdrop-hidden'></div>
