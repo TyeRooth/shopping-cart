@@ -19,9 +19,10 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/bought" element={<Bought />} />
             </Routes>
-
         </div>
       </div>
+      <Cart />
+      <div className='cart-backdrop-hidden'></div>
     </Router>
   );
 }
