@@ -1,8 +1,15 @@
 import '../App.css';
+import Coin from './Coin';
 
 const Coins = () => {
     return (
-        <h1>Coins</h1>
+        <div className='coins-page'>
+            <div className='coins-div'>
+                <Coin/>
+                <Coin/>
+                <Coin/>
+            </div>
+        </div>
     )
 }
 
