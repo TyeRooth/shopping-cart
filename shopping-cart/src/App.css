@@ -228,7 +228,9 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   flex-grow: 1;
-  padding-top: 50px;
+  padding: 50px 10px;
+  border-radius: 4%;
+  height: max-content;
 }
 
 .coin {
