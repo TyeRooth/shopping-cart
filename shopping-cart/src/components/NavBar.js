@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Link to='/coins' className='link grow'>Coins</Link>
                     <Link to='/contact' className='link grow'>Contact</Link>
                     <button id='cart-button' className='grow'>
-                        <div id='cart-amount'>0</div>
+                        <div id='cart-amount' aria-label='cart-amount'>0</div>
                         <Icon path={mdiCart}
                             size={1.5} color='white'/>
                     </button>
