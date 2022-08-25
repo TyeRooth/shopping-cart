@@ -90,7 +90,7 @@ nav {
   width: 35vw;
   font-size: 30px;
   background-color: white;
-  transition: left 0.85s ease-in-out 0s;
+  transition: right 0.85s ease-in-out 0s;
 }
 
 .cart-hidden {
@@ -110,7 +110,7 @@ nav {
   height: 100%;
   background-color: black;
   opacity: 0.5;
-  transition: right 0.85s ease-in-out 0s;
+  transition: left 0.85s ease-in-out 0s;
 }
 
 .cart-backdrop-hidden {

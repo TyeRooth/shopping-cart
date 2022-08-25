@@ -28,4 +28,21 @@ describe("Coin", () => {
     });
     expect(cartAmount.textContent).toBe('1');
   })
+});
+
+describe('Cart', () => {
+  it('cart visibility can be toggled', () => {
+    render(<App />);
+    const cartButton = screen.getByRole("button", { name: "cart-amount"});
+    const closeCartButton = screen.getByRole("button", { name: 'Close'});
+    const cart = screen.getByTestId('cart');
+    act(() => {
+      userEvent.click(cartButton);
+    });
+    expect(cart.className).toBe('cart-visible');
+    act(() => {
+      userEvent.click(closeCartButton);
+    });
+    expect(cart.className).toBe('cart-hidden');
+  })
 })

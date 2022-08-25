@@ -14,7 +14,7 @@ const NavBar = (props) => {
                     <Link to='/' className='link grow'>Home</Link>
                     <Link to='/coins' className='link grow'>Coins</Link>
                     <Link to='/contact' className='link grow'>Contact</Link>
-                    <button id='cart-button' className='grow'>
+                    <button id='cart-button' className='grow' onClick={props.showCart}>
                         <div id='cart-amount' aria-label='cart-amount'>{props.totalItems}</div>
                         <Icon path={mdiCart}
                             size={1.5} color='white'/>

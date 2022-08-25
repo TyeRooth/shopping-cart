@@ -26,6 +26,11 @@ import imx from './images/imx.png';
 
 function App() {
   const [coins, setCoins] = useState(coinsArray);
+  const [cart, setCart] = useState(false);
+
+  function showCart () {setCart(true)};
+  function hideCart () {setCart(false)};
+
   const cartAmount = coins.reduce(
     (prevCoins, currCoin) => prevCoins + currCoin.quantity,
     0,
@@ -41,10 +46,15 @@ function App() {
     setCoins(updatedCoins); 
   };
 
+  const cartFuncs = {
+    hide: hideCart,
+    increment: incrementQuantity
+  };
+
   return (
     <Router>
       <div className='page'>
-        <NavBar totalItems={cartAmount}/>
+        <NavBar totalItems={cartAmount} showCart={showCart}/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/coins" element={<Coins coins={coinsArray} addItem={incrementQuantity}/>} />
@@ -52,8 +62,8 @@ function App() {
             <Route path="/bought" element={<Bought />} />
           </Routes>
       </div>
-      <Cart />
-      <div className='cart-backdrop-hidden'></div>
+      <Cart visible={cart} funcs={cartFuncs}/>
+      <div className={cart ? 'cart-backdrop-visible' : 'cart-backdrop-hidden'} onClick={hideCart}></div>
     </Router>
   );
 }
