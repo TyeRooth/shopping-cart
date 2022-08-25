@@ -1,4 +1,5 @@
 import '../App.css';
+import Item from './Item';
 
 const Cart = (props) => {
     const {hide, increment} = props.funcs;
@@ -6,6 +7,7 @@ const Cart = (props) => {
     return (
         <div className={visibility} data-testid="cart">
             <h1>Crypto Cart</h1>
+            <Item coin={props.coins} />
             <div><b>Total: $0</b></div>
             <button className='cart-button' id='checkout'>Checkout</button>
             <button className='cart-button' id='close-cart' onClick={hide}>Close</button>

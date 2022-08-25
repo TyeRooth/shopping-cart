@@ -144,6 +144,59 @@ nav {
   background-color: lightcoral;
 }
 
+.item {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;  
+}
+
+.item-image {
+  height: 100px;
+  width: 100px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-value {
+  font-size: 20px;
+}
+
+.item-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.decrement,
+.increment {
+  border-radius: 0%;
+  box-shadow: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-quantity {
+  width: 30px;
+text-align: center;
+font-size: 20px;
+}
+
 .home {
   flex-grow: 1;
   background-color: rgb(0, 0, 31);

@@ -62,7 +62,7 @@ function App() {
             <Route path="/bought" element={<Bought />} />
           </Routes>
       </div>
-      <Cart visible={cart} funcs={cartFuncs}/>
+      <Cart visible={cart} funcs={cartFuncs} coins={coins[0]}/>
       <div className={cart ? 'cart-backdrop-visible' : 'cart-backdrop-hidden'} onClick={hideCart}></div>
     </Router>
   );
