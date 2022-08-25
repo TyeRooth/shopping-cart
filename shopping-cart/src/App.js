@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
@@ -24,13 +25,29 @@ import imx from './images/imx.png';
 
 
 function App() {
+  const [coins, setCoins] = useState(coinsArray);
+  const cartAmount = coins.reduce(
+    (prevCoins, currCoin) => prevCoins + currCoin.quantity,
+    0,
+  );
+  
+  function incrementQuantity (item) {
+    const updatedCoins = coins.map(coin => {
+      if (coin.name === item) {
+        coin.quantity++;
+      }
+      return coin;
+    });
+    setCoins(updatedCoins); 
+  };
+
   return (
     <Router>
       <div className='page'>
-        <NavBar/>
+        <NavBar totalItems={cartAmount}/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/coins" element={<Coins coins={coinsArray}/>} />
+            <Route path="/coins" element={<Coins coins={coinsArray} addItem={incrementQuantity}/>} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/bought" element={<Bought />} />
           </Routes>

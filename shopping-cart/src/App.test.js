@@ -4,15 +4,16 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import App from './App';
-import Coin from './components/Coin';
 
 describe("Coin", () => {
+  
   it('cart amount in document', () =>{
     render (<App />);
     const addToCart = screen.getByRole("button", { name: "cart-amount"});
     expect(addToCart).toBeInTheDocument();
     expect(addToCart.textContent).toBe('0');
   });
+
   it('cart amount increments by one on Coins page', () => {
     render (<App />);
     const cartAmount = screen.getByRole("button", { name: "cart-amount"});

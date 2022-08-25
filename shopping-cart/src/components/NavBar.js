@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { mdiCart } from '@mdi/js';
 import Icon from '@mdi/react';
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <header>
             <div className='header-div'>
@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Link to='/coins' className='link grow'>Coins</Link>
                     <Link to='/contact' className='link grow'>Contact</Link>
                     <button id='cart-button' className='grow'>
-                        <div id='cart-amount' aria-label='cart-amount'>0</div>
+                        <div id='cart-amount' aria-label='cart-amount'>{props.totalItems}</div>
                         <Icon path={mdiCart}
                             size={1.5} color='white'/>
                     </button>
