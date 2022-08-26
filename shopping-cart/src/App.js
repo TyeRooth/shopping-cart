@@ -94,7 +94,7 @@ const coinsArray = [
   {
     src: bitcoin,
     name: 'Bitcoin',
-    value: 10000,
+    value: 20000,
     quantity: 0, 
   },
   {

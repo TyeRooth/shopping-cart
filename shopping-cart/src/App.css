@@ -292,6 +292,7 @@ footer {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   flex-grow: 1;
   padding: 50px 10px;
   border-radius: 4%;
@@ -327,6 +328,7 @@ footer {
 .coin-value {
   font-family: 'Digital';
   font-size: 20px;
+  text-align: center;
 }
 
 .add-button {
