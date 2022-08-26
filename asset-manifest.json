@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/TyeRooth/shopping-cart/static/css/main.0c1b4d41.css",
+    "main.js": "/TyeRooth/shopping-cart/static/js/main.6e6668aa.js",
+    "static/js/787.d6fe38e8.chunk.js": "/TyeRooth/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/usdc.png": "/TyeRooth/shopping-cart/static/media/usdc.c4477cfcf6565cacc68b.png",
+    "static/media/imx.png": "/TyeRooth/shopping-cart/static/media/imx.82400cb4e7f4e60ee9a0.png",
+    "static/media/cardano.png": "/TyeRooth/shopping-cart/static/media/cardano.d9b90224323ccff57026.png",
+    "static/media/ethereum.jpg": "/TyeRooth/shopping-cart/static/media/ethereum.506aff67dbbdaba0ffb1.jpg",
+    "static/media/xrp.png": "/TyeRooth/shopping-cart/static/media/xrp.a30ac2af14f2c3a5461a.png",
+    "static/media/loopring.png": "/TyeRooth/shopping-cart/static/media/loopring.71511b25085d7648057a.png",
+    "static/media/binance.png": "/TyeRooth/shopping-cart/static/media/binance.92643887cb735977d3b9.png",
+    "static/media/Silkscreen-Bold.ttf": "/TyeRooth/shopping-cart/static/media/Silkscreen-Bold.0d5ef208970ed5db1ab6.ttf",
+    "static/media/tether.png": "/TyeRooth/shopping-cart/static/media/tether.ae1267bcdb4121dbf8e0.png",
+    "index.html": "/TyeRooth/shopping-cart/index.html",
+    "static/media/dogecoin.svg": "/TyeRooth/shopping-cart/static/media/dogecoin.8b6760c301157c6d0a9b9aef850e6801.svg",
+    "main.0c1b4d41.css.map": "/TyeRooth/shopping-cart/static/css/main.0c1b4d41.css.map",
+    "main.6e6668aa.js.map": "/TyeRooth/shopping-cart/static/js/main.6e6668aa.js.map",
+    "787.d6fe38e8.chunk.js.map": "/TyeRooth/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c1b4d41.css",
+    "static/js/main.6e6668aa.js"
+  ]
+}
