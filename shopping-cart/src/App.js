@@ -31,6 +31,14 @@ function App() {
   function showCart () {setCart(true)};
   function hideCart () {setCart(false)};
 
+  function resetCoins () {
+    const resetCoins = coins.map(coin => {
+      coin.quantity = 0;
+      return coin;
+    })
+    setCoins(resetCoins);
+  };
+
   const cartAmount = coins.reduce(
     (prevCoins, currCoin) => prevCoins + currCoin.quantity,
     0,
@@ -46,9 +54,23 @@ function App() {
     setCoins(updatedCoins); 
   };
 
+  function decrementQuantity (item) {
+    const updatedCoins = coins.map(coin => {
+      if (coin.name === item) {
+        coin.quantity--;
+      };
+      return coin;
+    });
+    setCoins(updatedCoins);
+  }
+
+  const boughtCoins = coins.filter(coin => coin.quantity > 0);
+
   const cartFuncs = {
     hide: hideCart,
-    increment: incrementQuantity
+    increment: incrementQuantity,
+    decrement: decrementQuantity,
+    reset: resetCoins,
   };
 
   return (
@@ -62,7 +84,7 @@ function App() {
             <Route path="/bought" element={<Bought />} />
           </Routes>
       </div>
-      <Cart visible={cart} funcs={cartFuncs} coins={coins[0]}/>
+      <Cart visible={cart} funcs={cartFuncs} coins={boughtCoins}/>
       <div className={cart ? 'cart-backdrop-visible' : 'cart-backdrop-hidden'} onClick={hideCart}></div>
     </Router>
   );

@@ -140,14 +140,26 @@ nav {
   background-color: aquamarine;
 }
 
+#checkout-link {
+  color: black;
+  text-decoration: none;
+}
+
 #close-cart {
   background-color: lightcoral;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .item {
   display: flex;
   width: 80%;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
+  gap: 40px;  
 }
 
 .item-image {
@@ -331,4 +343,22 @@ footer {
 
 .add-button:hover {
   background-color: rgb(63, 63, 63);
+}
+
+.bought-page {
+  background-color: rgb(0, 0, 31);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.bought-amount {
+  font-size: 30px;
+  color: white;
+}
+
+.gif-container{
+  width: 480px;
 }
